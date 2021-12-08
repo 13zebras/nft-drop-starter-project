@@ -256,10 +256,6 @@ const CandyMachine = ({ walletAddress }) => {
   };
 
 
-  useEffect(() => {
-    getCandyMachineState();
-  }, []);
-  
   const getProvider = () => {
 	const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST;
 	
@@ -315,12 +311,17 @@ const CandyMachine = ({ walletAddress }) => {
 	});
   };
 
+  useEffect(() => {
+    getCandyMachineState();
+  }, [getCandyMachineState]);
+  
+  
 
   return (
     <div className="machine-container">
       <p>Drop Date: {machineStats.goLiveDateTimeString}</p>
       <p>Items Minted: {machineStats.itemsRedeemed} / {machineStats.itemsAvailable}</p>
-      <button className="cta-button mint-button" onClick={null}>
+      <button className="cta-button mint-button" onClick={mintToken}>
         Mint NFT
       </button>
     </div>
