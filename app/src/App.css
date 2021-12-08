@@ -1,3 +1,16 @@
+:root {
+	--p-percent: 60%;
+	--opacity: 0.6;
+	--p-red: hsla(0, 100%, var(--p-percent), var(--opacity));
+	--p-orange: hsla(30, 100%, var(--p-percent), var(--opacity));
+	--p-yellow: hsla(60, 100%, var(--p-percent), var(--opacity));
+	--p-green: hsla(120, 100%, var(--p-percent), var(--opacity));
+	--p-cyan: hsla(180, 100%, var(--p-percent), var(--opacity));
+	--p-blue: hsla(240, 100%, var(--p-percent), var(--opacity));
+	--p-purple: hsla(270, 100%, var(--p-percent), var(--opacity));
+	--p-magenta: hsla(300, 100%, var(--p-percent), var(--opacity));
+}
+
 .App {
   height: 100vh;
   background-color: rgb(20, 20, 20);
@@ -11,7 +24,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 30px 0 30px;
+  padding: 0 30px 60px 30px;
   color: white;
   position: relative;
   /* background-color: #35aee2; */
@@ -30,13 +43,21 @@
 
 .header {
   margin: 0;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold;
 }
 
 .sub-text {
-  font-size: 25px;
+  font-size: 32px;
+  margin: 1.5em 0 0.6em;
 }
+
+.sub-head {
+	font-size: 40px;
+	margin: 0 0 1.2em;
+}
+
+
 
 .gradient-text {
   background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
@@ -46,41 +67,76 @@
 }
 
 .cta-button {
-  height: 45px;
+  height: 60px;
   border: 0;
-  width: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  max-width: 40%;
+  min-width: 15rem;
+  padding-left: 60px;
+  padding-right: 60px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
+  margin: 20px auto;
 }
 
 .connect-wallet-button {
   color: white;
-  background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
+  background: -webkit-linear-gradient(left, var(--p-red), var(--p-yellow), var(--p-green));
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
 
 .mint-button {
-  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  background: -webkit-linear-gradient(left, var(--p-red), var(--p-orange), var(--p-yellow), var(--p-green), var(--p-cyan), var(--p-blue), var(--p-purple), var(--p-magenta));
   background-size: 200% 200%;
-  animation: gradient-animation 4s ease infinite;
-  margin-left: 10px;
+  animation: gradient-animation 8s ease infinite;
+  color: white;
+  
 }
+
+.divider {
+	height: 1px;
+	width: 60%;
+	margin: 1.5em auto;
+	border-bottom: 1px solid #445;
+	display: block;
+}
+
+.thumbnail-header {
+	font-size: 28px;
+	color: white;
+	margin: 0.2em 0 0.6em;
+}
+.thumbnail-container {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.thumbnails {
+	display: inline;
+	margin: 4px 4px;
+}
+
+.candy-text {
+	font-size: 20px;
+	color: #ccc;
+	width: 100%;
+	margin-top: 2em;
+  }
 
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100%;
-  bottom: 0;
-  left: 0;
-  /* padding-bottom: 45px; */
+  padding: 2em 0 1em;
+  /* position: absolute;
+  bottom: 20px;
+  left: 0; */
 }
+
+
 
 .twitter-logo {
   width: 35px;

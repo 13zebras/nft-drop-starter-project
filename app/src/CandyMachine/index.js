@@ -255,10 +255,11 @@ const CandyMachine = ({ walletAddress }) => {
     });
   };
 
+
   useEffect(() => {
     getCandyMachineState();
   }, []);
-
+  
   const getProvider = () => {
 	const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST;
 	
@@ -292,9 +293,10 @@ const CandyMachine = ({ walletAddress }) => {
 	const goLiveData = candyMachine.data.goLiveDate.toNumber();
   
 	// We will be using this later in our UI so let's generate this now
+	
 	const goLiveDateTimeString = `${new Date(
-	  goLiveData * 1000
-	).toGMTString()}`
+		goLiveData * 1000
+	  ).toGMTString()}`
 
 	setMachineStats({
 		itemsAvailable,
@@ -313,11 +315,12 @@ const CandyMachine = ({ walletAddress }) => {
 	});
   };
 
+
   return (
     <div className="machine-container">
-      <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
-      <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
-      <button className="cta-button mint-button">
+      <p>Drop Date: {machineStats.goLiveDateTimeString}</p>
+      <p>Items Minted: {machineStats.itemsRedeemed} / {machineStats.itemsAvailable}</p>
+      <button className="cta-button mint-button" onClick={null}>
         Mint NFT
       </button>
     </div>
