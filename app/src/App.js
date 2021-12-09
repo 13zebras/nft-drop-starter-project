@@ -56,6 +56,7 @@ const App = () => {
 	  const response = await solana.connect();
 	  console.log('Connected with Public Key:', response.publicKey.toString());
 	  setWalletAddress(response.publicKey.toString());
+	  
 	}
   };
 
@@ -92,8 +93,7 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <p className="header">Renaissance Shade</p>
-          <p className="sub-text">An NFT drop of</p>
-		  <p className="sub-head">Old Masters Throwing Shade</p>
+		  <p className="sub-head">NFT's of Old Masters Throwing Shade</p>
 		  
 		  
           {!walletAddress && renderNotConnectedContainer()}
@@ -101,16 +101,7 @@ const App = () => {
 		
 		{walletAddress && <CandyMachine walletAddress={window.solana} />}
 		<div className="divider">&nbsp;</div>
-		<p className="thumbnail-header">NFT's</p>
-		<div className="thumbnail-container">
-			<img className="thumbnails" src="https://picsum.photos/100/65?random=1" alt="pic" width="100" height="65" />
-			<img className="thumbnails" src="https://dummyimage.com/100x65/331155/fff" alt="pic" width="100" height="65" />
-			<img className="thumbnails" src="https://picsum.photos/100/65?random=2" alt="pic" width="100" height="65" />
-			<img className="thumbnails" src="https://dummyimage.com/100x65/338822/fff" alt="pic" width="100" height="65" />
-			<img className="thumbnails" src="https://picsum.photos/100/65?random=3" alt="pic" width="100" height="65" />
-			<img className="thumbnails" src="https://dummyimage.com/100x65/882211/fff" alt="pic" width="100" height="65" />
-		</div>
-		<div className="divider">&nbsp;</div>
+		
 		
 		<p className="candy-text">NFT's and Site made  with Candy 🍭 Machine by Metaplex</p>
 		<div className="footer-container">

@@ -9,11 +9,15 @@
 	--p-blue: hsla(240, 100%, var(--p-percent), var(--opacity));
 	--p-purple: hsla(270, 100%, var(--p-percent), var(--opacity));
 	--p-magenta: hsla(300, 100%, var(--p-percent), var(--opacity));
+	--g1: hsla(240, 40%, 10%, 1);
+	--g2: hsla(240, 40%, 5%, 1);
+	--g3: hsla(240, 85%, 14%, 1);
+	--g4: hsla(240, 50%, 15%, 1);
 }
 
 .App {
   height: 100vh;
-  background-color: rgb(20, 20, 20);
+  background-color: hsl(240, 5%, 5%);
   overflow: scroll;
   text-align: center;
   overflow: hidden;
@@ -43,18 +47,18 @@
 
 .header {
   margin: 0;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
 }
 
 .sub-text {
-  font-size: 32px;
-  margin: 1.5em 0 0.6em;
+  font-size: 28px;
+  margin: 0.5em 0 0.6em;
 }
 
 .sub-head {
-	font-size: 40px;
-	margin: 0 0 1.2em;
+	font-size: 26px;
+	margin: 0.5em 0 1.2em;
 }
 
 
@@ -69,8 +73,7 @@
 .cta-button {
   height: 60px;
   border: 0;
-  max-width: 40%;
-  min-width: 15rem;
+  width: 18rem;
   padding-left: 60px;
   padding-right: 60px;
   border-radius: 10px;
@@ -92,8 +95,17 @@
   background-size: 200% 200%;
   animation: gradient-animation 8s ease infinite;
   color: white;
-  
 }
+
+.disabled-button {
+	background: -webkit-linear-gradient(left, var(--g1), var(--g2), var(--g3), var(--g4));
+	background-size: 200% 200%;
+	animation: gradient-animation 6s ease infinite;
+	color: #eeeef3;
+	font-size: 22px;
+	border: 1px solid #445;
+	font-style: italic;
+  }
 
 .divider {
 	height: 1px;
@@ -101,6 +113,13 @@
 	margin: 1.5em auto;
 	border-bottom: 1px solid #445;
 	display: block;
+}
+
+.loading {
+	font-style: italic;
+	font-size: 22px;
+	font-weight: bold;
+	color: hsla(50, 100%, 55%, 1)
 }
 
 .thumbnail-header {
@@ -119,10 +138,10 @@
 }
 
 .candy-text {
-	font-size: 20px;
+	font-size: 18px;
 	color: #ccc;
 	width: 100%;
-	margin-top: 2em;
+	margin-top: 1.5em;
   }
 
 .footer-container {
@@ -130,7 +149,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 2em 0 1em;
+  padding: 1em 0 1em;
   /* position: absolute;
   bottom: 20px;
   left: 0; */
