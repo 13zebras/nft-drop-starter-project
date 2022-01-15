@@ -91,9 +91,10 @@ const App = () => {
 		 </div>
 		
 		{walletAddress && <CandyMachine walletAddress={window.solana} />}
-		<div className="divider">&nbsp;</div>
 		
-		{/*<p className="candy-text">NFT's and Site made  with Candy 🍭 Machine by Metaplex</p>*/}
+		
+		{/*<div className="divider">&nbsp;</div>
+		<p className="candy-text">NFT's and Site made  with Candy 🍭 Machine by Metaplex</p>*/}
 		
 		<div className="footer-container">
 		
