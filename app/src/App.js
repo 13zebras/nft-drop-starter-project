@@ -8,11 +8,10 @@ const TWITTER_HANDLE = 'tom13zebras';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
-  // Actions
-
+  
+	// state
   const [walletAddress, setWalletAddress] = useState(null);
 
-  
   const checkIfWalletIsConnected = async () => {
     try {
       const { solana } = window;
@@ -22,9 +21,10 @@ const App = () => {
           console.log('Phantom wallet found!');
 
 		  /*
-         * The solana object gives us a function that will allow us to connect
-         * directly with the user's wallet!
-         */
+      * The solana object provides
+			* a function that will allow connecting
+      * directly with the user's wallet!
+      */
 		  const response = await solana.connect({ onlyIfTrusted: true });
 		  console.log(
 			'Connected with Public Key:',
@@ -32,8 +32,8 @@ const App = () => {
 		  );
 
 		   /*
-           * Set the user's publicKey in state to be used later!
-           */
+        * Set the user's publicKey in state
+        */
 		   setWalletAddress(response.publicKey.toString());
 
         }
@@ -46,8 +46,7 @@ const App = () => {
   };
 
   /*
-   * Let's define this method so our code doesn't break.
-   * We will write the logic for this next!
+   * Connect Wallet
    */
   const connectWallet = async () => {
 	const { solana } = window;
@@ -56,13 +55,11 @@ const App = () => {
 	  const response = await solana.connect();
 	  console.log('Connected with Public Key:', response.publicKey.toString());
 	  setWalletAddress(response.publicKey.toString());
-	  
-	}
+		}
   };
 
   /*
-   * We want to render this UI when the user hasn't connected
-   * their wallet to our app yet.
+   * Render if wallet not connected
    */
   const renderNotConnectedContainer = () => (
     <button
@@ -74,8 +71,7 @@ const App = () => {
   );
 
   /*
-   * When our component first mounts, let's check to see if we have a connected
-   * Phantom Wallet
+   * Check if Phantom Wallet Connected
    */
   useEffect(() => {
     const onLoad = async () => {
@@ -84,9 +80,6 @@ const App = () => {
     window.addEventListener('load', onLoad);
     return () => window.removeEventListener('load', onLoad);
   }, []);
-
-	
-	
 	
   return (
     <div className="App">
@@ -94,16 +87,14 @@ const App = () => {
         <div className="header-container">
           <p className="header">Renaissance Shade</p>
 		  <p className="sub-head">NFT's of Old Masters Throwing Shade</p>
-		  
-		  
           {!walletAddress && renderNotConnectedContainer()}
 		 </div>
 		
 		{walletAddress && <CandyMachine walletAddress={window.solana} />}
 		<div className="divider">&nbsp;</div>
 		
+		{/*<p className="candy-text">NFT's and Site made  with Candy 🍭 Machine by Metaplex</p>*/}
 		
-		<p className="candy-text">NFT's and Site made  with Candy 🍭 Machine by Metaplex</p>
 		<div className="footer-container">
 		
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
