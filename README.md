@@ -16,21 +16,11 @@ We worked with the following "tools":
 - Arweave!
 - Phantom Wallet
 - React
-- Netlify
 - Opensea
 
-I was familiar with Vercel, React, and Opensea, but Solana, Metaplex, Candy Machine, Arweave, and the Phantom Wallet were new to me. I absolutely *love* working with Solana!
+I was familiar with React, and Opensea, but Solana, Metaplex, Candy Machine, Arweave, and the Phantom Wallet were new to me. I really *enjoy* working with Solana!
 
 Metaplex and Candy Machine do a great job of providing a pseudo-frontend to the smart contract on the Solana blockchain. It abstracts away needing to write code in Rust and, more importantly, needing to write bug free and accurate code that will handle monetary transactions without error. 
-
-Vercel was a breeze.
-
-### URL for Project
-
-URL for Solana NFT Project:
-- [Solana NFT Drop Project - sol-nft-13z.netlify.app](https://sol-nft-13z.netlify.app/)
-
-The project is hosted at [Netlify](https://netlify.com).
 
 ### Sample NFTs
 
