@@ -16,7 +16,7 @@ We worked with the following "tools":
 - Arweave!
 - Phantom Wallet
 - React
-- Vercel
+- Netlify
 - Opensea
 
 I was familiar with Vercel, React, and Opensea, but Solana, Metaplex, Candy Machine, Arweave, and the Phantom Wallet were new to me. I absolutely *love* working with Solana!
@@ -28,9 +28,9 @@ Vercel was a breeze.
 ### URL for Project
 
 URL for Solana NFT Project:
-- [Solana NFT Drop Project - solnft.13z.dev](https://solnft.13z.dev)
+- [Solana NFT Drop Project - sol-nft-13z.netlify.app](https://sol-nft-13z.netlify.app/)
 
-The project is hosted at [Vercel](https://vercel.com).
+The project is hosted at [Netlify](https://netlify.com).
 
 ### Sample NFTs
 
