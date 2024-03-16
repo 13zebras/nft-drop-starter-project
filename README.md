@@ -26,8 +26,3 @@ Metaplex and Candy Machine do a great job of providing a pseudo-frontend to the 
 
 ![Renaissance Shade NFTs](sample_images/sample_renaissance_shade_nfts.jpg)
 
-### Buildspace
-
-[Buildspace](https://buildspace.so) provided excellent instruction with a very deep dive into the entire entire process minting NFTs using Solidity, Ethereum, and hardhat, as well as developing, testing, and deploying a web3 app.  
-
-I received a **Buildspace NFT** - [see it on Opensea](https://opensea.io/assets/matic/0x3cd266509d127d0eac42f4474f57d0526804b44e/5480) - for completing this project.) for completing this project.
