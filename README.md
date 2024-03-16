@@ -1,6 +1,4 @@
-# Solana NFT Drop Project
-
-## Renaissance Shade NFTs
+# Solana NFT: Renaissance Shade
 
 ### About This Project
 
@@ -13,16 +11,15 @@ I chose to have as the theme of the NFTs various images from Renaissance masters
 We worked with the following "tools":
 - Solana
 - Metaplex (Candy Machine)
-- Arweave!
+- Arweave
 - Phantom Wallet
 - React
 - Opensea
 
-I was familiar with React, and Opensea, but Solana, Metaplex, Candy Machine, Arweave, and the Phantom Wallet were new to me. I really *enjoy* working with Solana!
+I was familiar with React, and Opensea, but Solana, Metaplex, Candy Machine, Arweave, and the Phantom Wallet were new to me. I **really enjoyed** working with Solana!
 
 Metaplex and Candy Machine do a great job of providing a pseudo-frontend to the smart contract on the Solana blockchain. It abstracts away needing to write code in Rust and, more importantly, needing to write bug free and accurate code that will handle monetary transactions without error. 
 
 ### Sample NFTs
 
-![Renaissance Shade NFTs](sample_images/sample_renaissance_shade_nfts.jpg)
-
+![Renaissance Shade NFTs](sample_images/renaissance-shade.jpg)
